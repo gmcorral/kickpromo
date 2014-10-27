@@ -171,7 +171,7 @@
 		}
 		
 		// fill AJAX request
-		new Ajax.Request('http://'+location.host+'/server/auth.php', 
+		new Ajax.Request('http://'+location.host+'/kickpromo/server/auth.php', 
 		{
 			method:'post',
 			parameters:
@@ -238,7 +238,7 @@
 		}
 		
 		// fill AJAX request
-		new Ajax.Request('http://'+location.host+'/server/auth.php', 
+		new Ajax.Request('http://'+location.host+'/kickpromo/server/auth.php', 
 		{
 			method:'post',
 			parameters:

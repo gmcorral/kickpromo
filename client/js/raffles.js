@@ -59,7 +59,7 @@ function initializeNewRaffle()
 
 function cancelEdit()
 {
-	window.location.href = 'http://'+location.host+'/client/ca_raffles.php';
+	window.location.href = 'http://'+location.host+'/kickpromo/client/ca_raffles.php';
 }
 
 function updateRaffleName()
@@ -112,7 +112,7 @@ function saveGAW()
 	}
 	
 	// fill AJAX request to save giveaway
-	new Ajax.Request('http://'+location.host+'/server/edit.php', 
+	new Ajax.Request('http://'+location.host+'/kickpromo/server/edit.php', 
 	{
 		method:'post',
 		parameters: params,  
@@ -127,12 +127,12 @@ function saveGAW()
 				if(retVal == 'SESSION_ERROR')
 				{
 					alert("Error de sesión");
-					window.location.href = 'http://'+location.host+'/client/index.php';
+					window.location.href = 'http://'+location.host+'/kickpromo/client/index.php';
 				}
 				else if(retVal == 'REQUEST_ERROR')		
 				{
 					alert("Error al procesar la petición");
-					window.location.href = 'http://'+location.host+'/client/index.php';
+					window.location.href = 'http://'+location.host+'/kickpromo/client/index.php';
 				}
 				else
 				{
@@ -195,7 +195,7 @@ function saveGAW()
 function loadGAW(gawid)
 {
 	// fill AJAX request
-	new Ajax.Request('http://'+location.host+'/server/edit.php', 
+	new Ajax.Request('http://'+location.host+'/kickpromo/server/edit.php', 
 	{
 		method:'post',
 		parameters:
@@ -212,7 +212,7 @@ function loadGAW(gawid)
 				if(retVal == 'SESSION_ERROR')
 				{		
 					alert("Error de sesión");
-					window.location.href = 'http://'+location.host+'/client/index.php';
+					window.location.href = 'http://'+location.host+'/kickpromo/client/index.php';
 				}
 				else if(retVal == 'REQUEST_ERROR')
 				{		
@@ -306,7 +306,7 @@ function saveOption(option)
 	}
 	
 	// fill AJAX request to save option
-	new Ajax.Request('http://'+location.host+'/server/edit.php', 
+	new Ajax.Request('http://'+location.host+'/kickpromo/server/edit.php', 
 	{
 		method:'post',
 		parameters: params,
@@ -321,7 +321,7 @@ function saveOption(option)
 				if(retVal == 'SESSION_ERROR')
 				{
 					alert("Error de sesión");
-					window.location.href = 'http://'+location.host+'/client/index.php';
+					window.location.href = 'http://'+location.host+'/kickpromo/client/index.php';
 				}
 				else if(retVal == 'REQUEST_ERROR')
 				{
@@ -362,7 +362,7 @@ function deleteOption(optionId)
 		return false;
 	
 	// fill AJAX request to delete option
-	new Ajax.Request('http://'+location.host+'/server/edit.php', 
+	new Ajax.Request('http://'+location.host+'/kickpromo/server/edit.php', 
 	{
 		method:'post',
 		parameters:
@@ -381,7 +381,7 @@ function deleteOption(optionId)
 				if(retVal == 'SESSION_ERROR')
 				{
 					alert("Error de sesión");
-					window.location.href = 'http://'+location.host+'/client/index.php';
+					window.location.href = 'http://'+location.host+'/kickpromo/client/index.php';
 				}
 				else if(retVal == 'REQUEST_ERROR')
 				{
@@ -438,7 +438,7 @@ function savePrize(prize)
 	}
 	
 	// fill AJAX request to save prize
-	new Ajax.Request('http://'+location.host+'/server/edit.php', 
+	new Ajax.Request('http://'+location.host+'/kickpromo/server/edit.php', 
 	{
 		method:'post',
 		parameters: params,
@@ -453,7 +453,7 @@ function savePrize(prize)
 				if(retVal == 'SESSION_ERROR')
 				{
 					alert("Error de sesión");
-					window.location.href = 'http://'+location.host+'/client/index.php';
+					window.location.href = 'http://'+location.host+'/kickpromo/client/index.php';
 				}
 				else if(retVal == 'REQUEST_ERROR')
 				{
@@ -494,7 +494,7 @@ function deletePrize(prizeId)
 		return false;
 	
 	// fill AJAX request to delete prize
-	new Ajax.Request('http://'+location.host+'/server/edit.php', 
+	new Ajax.Request('http://'+location.host+'/kickpromo/server/edit.php', 
 	{
 		method:'post',
 		parameters:
@@ -513,7 +513,7 @@ function deletePrize(prizeId)
 				if(retVal == 'SESSION_ERROR')
 				{
 					alert("Error de sesión");
-					window.location.href = 'http://'+location.host+'/client/index.php';
+					window.location.href = 'http://'+location.host+'/kickpromo/client/index.php';
 				}
 				else if(retVal == 'REQUEST_ERROR')
 				{
@@ -538,5 +538,5 @@ function finishSaveRequest()
 {
 	requestsPending--;
 	if(requestsPending < 0)
-		window.location.href = 'http://'+location.host+'/client/ca_raffles.php';	
+		window.location.href = 'http://'+location.host+'/kickpromo/client/ca_raffles.php';	
 }

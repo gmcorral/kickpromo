@@ -124,7 +124,7 @@
 	}
 	
 	// fill AJAX request
-	new Ajax.Request('http://'+location.host+'/server/auth.php', 
+	new Ajax.Request('http://'+location.host+'/kickpromo/server/auth.php', 
 	{
 	  method:'post',
 	  parameters:
@@ -152,14 +152,14 @@
 		  	
 		  	if(retVal == 'OK')
 		  	{
-			  	window.location.href = 'http://'+location.host+'/client/ca_raffles.php';
+			  	window.location.href = 'http://'+location.host+'/kickpromo/client/ca_raffles.php';
 		  	}
 		  	else
 		  	{
 		  	    // if new GAW is created, edit it
 		  		form = document.createElement('form');
         		form.setAttribute('method', 'POST');
-        		form.setAttribute('action', 'http://'+location.host+'/client/ca_newraffle.php');
+        		form.setAttribute('action', 'http://'+location.host+'/kickpromo/client/ca_newraffle.php');
         		myvar = document.createElement('input');
         		myvar.setAttribute('name', 'edit');
         		myvar.setAttribute('type', 'hidden');

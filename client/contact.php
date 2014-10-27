@@ -83,7 +83,7 @@
 		//alert("sendmail" + " " + from + " - " + subject + " - " + text);
 
 		// fill AJAX request
-		new Ajax.Request('http://'+location.host+'/server/sendRequest.php', 
+		new Ajax.Request('http://'+location.host+'/kickpromo/server/sendRequest.php', 
 		{
 			method:'post',
 			parameters:

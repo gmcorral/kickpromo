@@ -167,7 +167,7 @@
 	function initializeHeader()
 	{
 		// fill AJAX request
-		new Ajax.Request('http://'+location.host+'/server/auth.php', 
+		new Ajax.Request('http://'+location.host+'/kickpromo/server/auth.php', 
 		{
 			method:'post',
 			parameters:
@@ -182,7 +182,7 @@
 				    if(transport.responseText.strip() == '"SESSION_ERROR"')		
 				    {
 						alert("Error de sesión");
-						window.location.href = 'http://'+location.host+'/client/index.php';
+						window.location.href = 'http://'+location.host+'/kickpromo/client/index.php';
 					}
 					
 					// Get user info
@@ -215,7 +215,7 @@
 		var clave = document.getElementById("usr_passwd").value;
 
 		// fill AJAX request
-		new Ajax.Request('http://'+location.host+'/server/auth.php', 
+		new Ajax.Request('http://'+location.host+'/kickpromo/server/auth.php', 
 		{
 			method:'post',
 			parameters:
@@ -233,7 +233,7 @@
 					
 					// Load the client area if user exists
 					if(retVal != 'WRONG_USR_PASSWD')
-						window.location.href = 'http://'+location.host+'/client/ca_raffles.php';
+						window.location.href = 'http://'+location.host+'/kickpromo/client/ca_raffles.php';
 					else
 						alert('Usuario o contraseña incorrectos'); 
 				}

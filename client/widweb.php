@@ -93,7 +93,7 @@
 	function getGawCode(gaw_id)
 	{
 //		// fill AJAX request
-//		new Ajax.Request('http://'+location.host+'/server/run.php', 
+//		new Ajax.Request('http://'+location.host+'/kickpromo/server/run.php', 
 //		{
 //			method:'post',
 //			parameters:

@@ -47,7 +47,7 @@
 		n_pending = n_inprogress = n_winner = n_finished = 0;	
 	
 		// fill AJAX request
-		new Ajax.Request('http://'+location.host+'/server/edit.php', 
+		new Ajax.Request('http://'+location.host+'/kickpromo/server/edit.php', 
 		{
 			method:'post',
 			parameters:
@@ -249,7 +249,7 @@
 		// Edit selected gaw
 		form = document.createElement('form');
 		form.setAttribute('method', 'POST');
-		form.setAttribute('action', 'http://'+location.host+'/client/ca_newraffle.php');
+		form.setAttribute('action', 'http://'+location.host+'/kickpromo/client/ca_newraffle.php');
 		myvar = document.createElement('input');
 		myvar.setAttribute('name', 'edit');
 		myvar.setAttribute('type', 'hidden');
@@ -266,7 +266,7 @@
 	function deleteGaw(gaw_id)
 	{
 		// fill AJAX request
-		new Ajax.Request('http://'+location.host+'/server/edit.php', 
+		new Ajax.Request('http://'+location.host+'/kickpromo/server/edit.php', 
 		{
 			method:'post',
 			parameters:
