@@ -1,4 +1,0 @@
-kickpromo
-=========
-
-Kick Promo
